@@ -4,8 +4,11 @@ from sentence_transformers import SentenceTransformer
 
 application = Flask(__name__)
 
-# Load the pre-trained SBERT model
-model = SentenceTransformer('bert-base-nli-mean-tokens')
+# Specify the path to the model folder
+model_folder = "./sentence-transformers_bert-base-nli-mean-tokens"
+
+# Load the pre-trained SBERT model from the specified folder
+model = SentenceTransformer(model_folder)
 
 # Example sentences
 sentences = [
